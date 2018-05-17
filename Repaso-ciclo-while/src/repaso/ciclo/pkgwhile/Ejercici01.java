@@ -17,10 +17,6 @@ public class Ejercici01 {
         subtotal = 0.0;
         int continuar;
 
-
-            
-        
-        
         cadenaEncabezado = "\t\tFactura\n\nSupermercado: 'Todo a menor precio'\nNombre del Cliente: ";
         cadenaArticulos = "Articulo\t\tCantidad\t\tPrecio Unitario\t\tPrecio Total\n";
         
