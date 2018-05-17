@@ -30,7 +30,7 @@ public class Taller01_Ejercicio02 {
         for(int i = 1; i <= padres; i ++){
             entrada.nextLine(); // Limpiar Scanner
             // Numero de hijos
-            System.out.printf("\n\nIngrese el Nombre del padre #%d: ", i);
+            System.out.printf("\n\nIngrese el Nombre del padre (%d): ", i);
             nombrePadre = entrada.nextLine();
             nombrePadre = nombrePadre.toUpperCase();
             
@@ -40,8 +40,8 @@ public class Taller01_Ejercicio02 {
             System.out.println("Ingrese el número de hijos: ");
             hijos = entrada.nextInt();
 
-            cadena = String.format("---------------------------------------\nReporte Gastos de Padre de Familia\n\nNombre de Padre de Familia: %s\nSueldo semanal: $ %.2f\nNumero de hijos: %d"
-                    + "\n\nReporte de Gastos\nPersona\t\tPasajes\t\tBar\t\tSalidas\n", nombrePadre, ganancia, hijos);
+            cadena = String.format("%s---------------------------------------\nReporte Gastos de Padre de Familia\n\nNombre de Padre de Familia: %s\nSueldo semanal: $ %.2f\nNumero de hijos: %d"
+                    + "\n\nReporte de Gastos\nPersona\t\tPasajes\t\tBar\t\tSalidas\n", cadena, nombrePadre, ganancia, hijos);
         
 
             // Ciclo for
@@ -65,23 +65,25 @@ public class Taller01_Ejercicio02 {
                 // Actualizamos cadena
                 cadena = String.format("%s%s%d\t\t%.2f\t\t%.2f\t\t%.2f\n", cadena, "Hijo", contador, pasajes, bar, salidas);
             }
-
+            // Fin for
 
             // Actualizacion cadena
             cadena = String.format("%sTOTAL\t\t%.2f\t\t%.2f\t\t%.2f", cadena, totalPasajes, totalBar, totalSalidas);
 
             total = totalPasajes + totalBar + totalSalidas;
 
-            // Salida
+            // Comparacion
             if(total > ganancia){
-                System.out.printf("\n%s\n\nEl padre de familia %s le falta dinero\n", cadena, nombrePadre);
+                cadena = String.format("\n%s\n\nEl padre de familia %s le falta dinero\n---------------------------------------\n", cadena, nombrePadre);
             }else if(total < ganancia){
-                System.out.printf("\n%s\n\nEl padre de familia %s le sobra dinero\n---------------------------------------\n", cadena, nombrePadre);
+                cadena = String.format("\n%s\n\nEl padre de familia %s le sobra dinero\n---------------------------------------\n", cadena, nombrePadre);
             }else{
-                System.out.printf("\n%s\n\nEl padre de familia %s le alcanza dinero\n", cadena, nombrePadre);
+                cadena = String.format("\n%s\n\nEl padre de familia %s le alcanza dinero\n---------------------------------------\n", cadena, nombrePadre);
             }
-            // Fin for
+            
         }// Fin for
-       
+        
+        // Salida
+        System.out.printf("%s", cadena);
     }
 }
