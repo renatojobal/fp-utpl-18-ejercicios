@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Renato
  */
-public class Taller2 {
+public class Taller01_Ejercicio02 {
         public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
