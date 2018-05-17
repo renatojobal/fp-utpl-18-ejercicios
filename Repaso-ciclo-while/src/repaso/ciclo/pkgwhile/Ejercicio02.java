@@ -14,7 +14,7 @@ public class Ejercicio02 {
         Double sumImpuestos=0.0, sumPrecioVenta=0.0, costo=0.0, impuesto=0.0, precioVenta=0.0; 
         String cadena01, cadena02, marca, origen;
         
-        cadena01 = "\tReporte de Autos Importados\n\nMarca\t\t\tOrigen\t\tCosto\t\tImpuesto\t\tPrecio Venta\n";
+        cadena01 = "\tReporte de Autos Importados\n\nMarca\t\t\t\tOrigen\t\t\tCosto\t\t\tImpuesto\tPrecio Venta\n";
         cadena02 = "";
         
         // Ingreso de datos
@@ -63,7 +63,7 @@ public class Ejercicio02 {
             precioVenta = costo + impuesto;
             
             // Concatenación de cadena01
-            cadena01 = String.format("%s%s\t\t\t%s\t\t%.2f\t\t%.0f\t\t%.0f\n", cadena01, marca, origen, costo, impuesto, precioVenta);
+            cadena01 = String.format("%s%-8s\t\t\t%-8s\t\t%.2f\t\t%.0f\t\t%.0f\n", cadena01, marca, origen, costo, impuesto, precioVenta);
             
             
             // Concatenacion cadena02

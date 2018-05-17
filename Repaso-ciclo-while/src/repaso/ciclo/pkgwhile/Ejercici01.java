@@ -29,7 +29,6 @@ public class Ejercici01 {
         // Concatenamos el nombre a cadenaEncabezado
         cadenaEncabezado = String.format("%s%s\n", cadenaEncabezado, nombre);
         
-        
         // Ingreso de datos de los artículos
         continuar = 1;
         while (continuar == 1) {
@@ -47,7 +46,7 @@ public class Ejercici01 {
             subtotal = subtotal + precioTotal;
             
             // Concatenación de cadena
-            cadenaArticulos = String.format("%s%s\t\t%02.0f\t\t\t%.2f\t\t\t%.2f\n", cadenaArticulos, articulo, cantidad, precioUnit, precioTotal);
+            cadenaArticulos = String.format("%s%-8s\t\t%02.0f\t\t\t%.2f\t\t\t%.2f\n", cadenaArticulos, articulo, cantidad, precioUnit, precioTotal);
             
             // Continuar o no el cilo
             System.out.println("\nDesea ingresar otro artículo?: \n 1 = 'Si'  2 = 'No, salir'");
